@@ -42,11 +42,11 @@ class Post(models.Model): #상속
 ```
 
 - migration
+    - posts/migrations/0001_initial.py 생성
 ```shell
 # 번역본 생성
 python manage.py makemigrations
 ```
-    - posts/migrations/0001_initial.py
 ```shell
 # DB에 반영
 python manage.py migrate
