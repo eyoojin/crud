@@ -6,12 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index</h1>
-    {% for post in posts %}
-        <p>{{post.title}}</p>
-        <p>{{post.content}}</p>
-        <a href="/posts/{{post.id}}/">detail</a>
-        <hr>
-    {% endfor %}
+    <h1>Detail</h1>
+    <p>{{post.title}}</p>
+    <p>{{post.content}}</p>
+    <a href="/index/">home</a>
 </body>
 </html>
