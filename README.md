@@ -75,10 +75,12 @@ admin.site.register(Post)
 
 - Create 게시물 생성 기능 만들기
     - new()
+
         1. 사용자에게 빈 종이 제공
         2. 빈 종이에 내용을 입력
         3. 입력된 내용을 create로 전송
     - create()
+
         4. 전송된 데이터 중에서 필요한 정보를 추출
         5. DB에 저장
         6. 사용자에게 저장된 것을 보여줌 (2가지 중 선택)
@@ -97,8 +99,11 @@ from django.shortcuts import redirect
 - Update 게시물 수정 기능 만들기
     - edit()
         1. 기존 정보 보여주기(R)
+
     - update()
+
         2. 수정된 정보로 덮어쓰기(C)
+        
             3. 기존 정보 가져오기
             4. 새로운 정보 가져오기
             5. 기존 정보를 새로운 정보로 바꾸기
