@@ -71,19 +71,14 @@ admin.site.register(Post)
     - detail(id)
 
 - 전체 게시판 <-> 게시물 이동
-```html
-<!-- index.html -->
-<a href="/posts/{{post.id}}/">detail</a>
-<!-- detail.html -->
-<a href="/index/">home</a>
-```
+    - a 태그
 
 - Create 게시물 생성 기능 만들기
     - new()
         1. 사용자에게 빈 종이 제공
         2. 빈 종이에 내용을 입력
         3. 입력된 내용을 create로 전송
-    - create():
+    - create()
         4. 전송된 데이터 중에서 필요한 정보를 추출
         5. DB에 저장
         6. 사용자에게 저장된 것을 보여줌 (2가지 중 선택)
