@@ -7,9 +7,11 @@
 </head>
 <body>
     <h1>Detail</h1>
-    <p>{{post.title}}</p>
+    <h3>{{post.title}}</h3>
     <p>{{post.content}}</p>
-    <a href="/index/">Home🏠</a>
+    <a href="/posts/">Home🏠</a>
+    <!-- 수정 -->
     <a href="/posts/{{post.id}}/delete/">Delete🗑️</a>
+    <a href="/posts/{{post.id}}/edit/">Update🔨</a>
 </body>
 </html>

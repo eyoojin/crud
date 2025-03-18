@@ -21,7 +21,7 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Read (All)
-    path('index/', views.index),
+    path('posts/', views.index), # 수정
     # Read (1)
     path('posts/<int:id>/', views.detail),
     # Create
@@ -30,4 +30,7 @@ urlpatterns = [
     # Delete
     path('posts/<int:id>/delete/', views.delete),
     # 하나의 링크로 두개의 동작을 할 수 없기 때문에 새로운 링크 생성
+    # Update
+    path('posts/<int:id>/edit/', views.edit),
+    path('posts/<int:id>/update/', views.update)
 ]
