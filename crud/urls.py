@@ -27,4 +27,7 @@ urlpatterns = [
     # Create
     path('posts/new/', views.new),
     path('posts/create/', views.create),
+    # Delete
+    path('posts/<int:id>/delete/', views.delete),
+    # 하나의 링크로 두개의 동작을 할 수 없기 때문에 새로운 링크 생성
 ]

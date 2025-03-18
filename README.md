@@ -93,6 +93,8 @@ admin.site.register(Post)
 from django.shortcuts import redirect
 ```
 
+- Delete
+
 ---
 ### Crud
 

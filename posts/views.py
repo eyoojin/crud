@@ -36,3 +36,9 @@ def create(request):
 
     # return redirect('/index/') # 전체 게시판으로 이동
     return redirect(f'/posts/{post.id}/') # 게시물로 이동
+
+def delete(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+
+    return redirect('/index/')
