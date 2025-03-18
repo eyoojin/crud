@@ -61,6 +61,29 @@ from .models import Post
 # 현재 폴더의 models
 admin.site.register(Post)
 ```
+- Read 기능 만들기
+    - `views.py`
+```python
+from .models import Post
+
+def index(request):
+    posts = Post.objects.all()
+
+    context = {
+        'posts': posts
+    }
+    
+    return render(request, 'index.html', context)
+```
+
+    - `index.html`
+
+```html
+{% for post in posts %}
+    <p>{{post.title}}</p>
+    <p>{{post.content}}</p>
+{% endfor %}
+```
 ---
 ### Crud
 
