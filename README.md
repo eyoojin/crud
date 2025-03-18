@@ -46,12 +46,21 @@ class Post(models.Model): #상속
 # 번역본 생성
 python manage.py makemigrations
 ```
+    - posts/migrations/0001_initial.py
 ```shell
 # DB에 반영
 python manage.py migrate
 ```
-
-
+- create super user
+```shell
+python manage.py createsuperuser
+```
+- admin 페이지에 모델 등록 (`admin.py`)
+```python
+from .models import Post
+# 현재 폴더의 models
+admin.site.register(Post)
+```
 ---
 ### Crud
 
