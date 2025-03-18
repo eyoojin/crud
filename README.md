@@ -41,6 +41,16 @@ class Post(models.Model): #상속
     content = models.TextField()
 ```
 
+- migration
+```shell
+# 번역본 생성
+python manage.py makemigrations
+```
+```shell
+# DB에 반영
+python manage.py migrate
+```
+
 
 ---
 ### Crud
@@ -54,5 +64,5 @@ class Post(models.Model): #상속
 - DB
     - settings.py -> DATABASES -> 'ENGINE': 'django.db.backends.sqlite3' -> `db.sqlite3`
 
-- ORM
-    - Object
+- ORM: 번역기
+    - Object(Python 세상) | Relational(DB, SQL 세상) Mapping
