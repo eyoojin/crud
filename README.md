@@ -51,30 +51,46 @@ python manage.py makemigrations
 # DB에 반영
 python manage.py migrate
 ```
+
 - create super user
 ```shell
 python manage.py createsuperuser
 ```
+
 - admin 페이지에 모델 등록 (`admin.py`)
 ```python
 from .models import Post
 # 현재 폴더의 models
 admin.site.register(Post)
 ```
-- Read 전체 게시판 기능 만들기 
-    - `urls.py` index/
-    - `views.py` index()
-    - `index.html`
-- Read 게시물 기능 만들기
-    - `urls.py` posts/<int:id>/
-    - `views.py` detail(id)
-    - `detail.html`
-- 전체 게시판에서 게시물로 이동
-    - `index.html` & `detail.html`
-```html
-<a href="/posts/{{post.id}}/">detail</a>
 
+- Read 전체 게시판 기능 만들기 
+    - index()
+
+- Read 게시물 기능 만들기
+    - detail(id)
+
+- 전체 게시판 <-> 게시물 이동
+```html
+<!-- index.html -->
+<a href="/posts/{{post.id}}/">detail</a>
+<!-- detail.html -->
 <a href="/index/">home</a>
+```
+
+- Create
+    - new()
+        1. 사용자에게 빈 종이 제공
+        2. 빈 종이에 내용을 입력
+        3. 입력된 내용을 create로 전송
+    - create():
+        4. 전송된 데이터 중에서 필요한 정보를 추출
+        5. DB에 저장
+        6. 사용자에게 저장된 것을 보여줌 (2가지 중 선택)
+            - index로 이동
+            - detail로 이동
+```python
+from django.shortcuts import redirect
 ```
 
 ---
